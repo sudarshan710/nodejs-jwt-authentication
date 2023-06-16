@@ -21,5 +21,7 @@ async function connectToDatabase() {
 connectToDatabase();
 
 const authRoute = require("./routes/auth");
+const secretRoute = require('./routes/secretpage');
 
 app.use("/api/user", authRoute);
+app.use('/api/secret', secretRoute);
